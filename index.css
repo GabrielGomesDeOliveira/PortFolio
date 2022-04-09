@@ -72,6 +72,37 @@ p {
     border: solid 2px white;
 }
 
+@keyframes pisca {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+#nome::after {
+    content: "|";
+    margin-left: 5px;
+    opacity: 1;
+    animation: pisca 1s infinite;
+}
+
+#formacao::before {
+    content: "</ ";
+    margin-left: 5px;
+    opacity: 1;
+    animation: pisca 1s infinite;
+}
+
+#formacao::after {
+    content: " >";
+    margin-left: 5px;
+    opacity: 1;
+    animation: pisca 1s infinite;
+}
+
 .redes {
     margin: 20px 0 0 0;
 }
@@ -357,7 +388,11 @@ footer {
     }
 
     .caixa-informacoes h1 {
-        font-size: 25px;
+        font-size: 18pt;
+    }
+
+    .caixa-informacoes h2 {
+        font-size: 16pt;
     }
 
     .redes {
@@ -415,11 +450,11 @@ footer {
     }
 
     .caixa-informacoes h1 {
-        font-size: 18pt;
+        font-size: 16pt;
     }
 
     .caixa-informacoes h2 {
-        font-size: 16pt;
+        font-size: 14pt;
     }
 
     .redes a {
@@ -441,7 +476,11 @@ footer {
 
 @media (max-width: 360px) {
     .caixa-informacoes h1 {
-        font-size: 17pt;
+        font-size: 16pt;
+    }
+
+    .caixa-informacoes h2 {
+        font-size: 14pt;
     }
 
     .localizacao {
